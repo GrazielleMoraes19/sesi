@@ -9,17 +9,20 @@ import jakarta.persistence.Table;
 @Entity
 @Table(name = "alunos")
 public class Aluno {
+
+    @Id
+@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 private Long id;
 
-@Id
-@GeneratedValue(strategy = GenerationType.IDENTITY)
+
 
 private String nome;
 private String email;
 private String telefone;
 
 
-public Long getId() { return id; }
+    public Long getId() { return id; }
 
     public void setId(Long id) { this.id = id; }
 
